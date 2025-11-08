@@ -16,7 +16,8 @@ const Layout = ({ children }) => {
     { name: 'Client', href: '/client', icon: Monitor },
     { name: 'Algorithms', href: '/algorithms', icon: Code },
     { name: 'Comparative Study', href: '/comparative', icon: GitCompare },
-    { name: 'Classes & API', href: '/classes', icon: FileCode },
+    { name: 'Tutorials', href: '/tutorials', icon: FileCode },
+    { name: 'Contributing', href: '/contributing', icon: GitCompare },
   ]
 
   return (

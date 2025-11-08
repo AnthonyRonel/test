@@ -57,7 +57,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Features Grid */}
       <div className="grid md:grid-cols-2 gap-6">
         {features.map((feature, index) => {
           const Icon = feature.icon
@@ -83,7 +82,6 @@ const Home = () => {
         })}
       </div>
 
-      {/* Quick Links */}
       <div className="bg-dark-light border border-gray-700 rounded-lg p-8">
         <h2 className="text-2xl font-bold mb-6">Quick Navigation</h2>
         <div className="grid md:grid-cols-3 gap-4">

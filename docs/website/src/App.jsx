@@ -11,6 +11,8 @@ import Client from './pages/Client'
 import Algorithms from './pages/Algorithms'
 import Comparative from './pages/Comparative'
 import Classes from './pages/Classes'
+import Tutorials from './pages/Tutorials'
+import Contributing from './pages/Contributing'
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route path="/algorithms" element={<Algorithms />} />
           <Route path="/comparative" element={<Comparative />} />
           <Route path="/classes" element={<Classes />} />
+          <Route path="/tutorials" element={<Tutorials />} />
+          <Route path="/contributing" element={<Contributing />} />
         </Routes>
       </Layout>
     </Router>
