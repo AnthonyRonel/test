@@ -33,9 +33,10 @@ const Home = () => {
   return (
     <div className="space-y-12">
       {/* Hero Section */}
-      <div className="text-center space-y-6 py-12">
-        <h1 className="text-6xl font-bold">
-          R-Type <span className="text-primary">Game Engine</span>
+      <div className="text-center space-y-6 py-12 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-3xl -z-10"></div>
+        <h1 className="text-6xl font-bold float-animation">
+          R-Type <span className="gradient-text">Game Engine</span>
         </h1>
         <p className="text-xl text-gray-400 max-w-3xl mx-auto">
           A complete technical documentation for a networked multiplayer game engine
@@ -64,7 +65,7 @@ const Home = () => {
             <Link
               key={index}
               to={feature.link}
-              className="p-6 bg-dark-light border border-gray-700 rounded-lg hover:border-primary transition-colors group"
+              className="p-6 glass-card rounded-lg group shimmer"
             >
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
@@ -82,7 +83,7 @@ const Home = () => {
         })}
       </div>
 
-      <div className="bg-dark-light border border-gray-700 rounded-lg p-8">
+      <div className="glass-card rounded-lg p-8">
         <h2 className="text-2xl font-bold mb-6">Quick Navigation</h2>
         <div className="grid md:grid-cols-3 gap-4">
           <div>
@@ -114,26 +115,28 @@ const Home = () => {
 
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-dark-light border border-gray-700 rounded-lg p-6 text-center">
+        <div className="glass-card rounded-lg p-6 text-center pulse-glow">
           <div className="text-3xl font-bold text-primary">4</div>
           <div className="text-sm text-gray-400 mt-1">Core Modules</div>
         </div>
-        <div className="bg-dark-light border border-gray-700 rounded-lg p-6 text-center">
+        <div className="glass-card rounded-lg p-6 text-center pulse-glow">
           <div className="text-3xl font-bold text-primary">UDP</div>
           <div className="text-sm text-gray-400 mt-1">Binary Protocol</div>
         </div>
-        <div className="bg-dark-light border border-gray-700 rounded-lg p-6 text-center">
+        <div className="glass-card rounded-lg p-6 text-center pulse-glow">
           <div className="text-3xl font-bold text-primary">60Hz</div>
           <div className="text-sm text-gray-400 mt-1">Tick Rate</div>
         </div>
-        <div className="bg-dark-light border border-gray-700 rounded-lg p-6 text-center">
+        <div className="glass-card rounded-lg p-6 text-center pulse-glow">
           <div className="text-3xl font-bold text-primary">C++17</div>
           <div className="text-sm text-gray-400 mt-1">Modern C++</div>
         </div>
       </div>
 
       {/* Project Info */}
-      <div className="bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-lg p-8">
+      <div className="neon-border rounded-lg p-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
+        <div className="relative z-10">
         <h2 className="text-2xl font-bold mb-4">About This Project</h2>
         <p className="text-gray-300 mb-4">
           This documentation covers the complete R-Type game engine implementation, developed as part
@@ -144,6 +147,7 @@ const Home = () => {
           The engine features a custom Entity-Component-System, binary UDP networking protocol,
           multi-threaded server architecture, and a complete lobby system for multiplayer matchmaking.
         </p>
+        </div>
       </div>
     </div>
   )

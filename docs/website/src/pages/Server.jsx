@@ -5,15 +5,16 @@ const Server = () => {
   return (
     <div className="space-y-8">
       {/* Header */}
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Server Architecture</h1>
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-3xl -z-10"></div>
+        <h1 className="text-4xl font-bold mb-4"><span className="gradient-text">Server Architecture</span></h1>
         <p className="text-gray-400 text-lg">
           Multi-threaded authoritative server handling concurrent game instances.
         </p>
       </div>
 
       {/* Overview */}
-      <section className="bg-dark-light border border-gray-700 rounded-lg p-6">
+      <section className="glass-card rounded-lg p-6">
         <h2 className="text-2xl font-bold mb-4 text-primary">System Overview</h2>
         <p className="text-gray-300 mb-4">
           The server is the <strong>authoritative source of truth</strong> for all game state.
@@ -22,7 +23,7 @@ const Server = () => {
         </p>
 
         <div className="grid md:grid-cols-3 gap-4 mt-6">
-          <div className="bg-dark border border-gray-600 rounded-lg p-4">
+          <div className="glass-card rounded-lg p-4 shimmer">
             <div className="flex items-center gap-3 mb-3">
               <ServerIcon size={24} className="text-primary" />
               <h3 className="font-bold">Multi-threaded</h3>
@@ -32,7 +33,7 @@ const Server = () => {
             </p>
           </div>
 
-          <div className="bg-dark border border-gray-600 rounded-lg p-4">
+          <div className="glass-card rounded-lg p-4 shimmer">
             <div className="flex items-center gap-3 mb-3">
               <Users size={24} className="text-primary" />
               <h3 className="font-bold">Room-based</h3>
@@ -42,7 +43,7 @@ const Server = () => {
             </p>
           </div>
 
-          <div className="bg-dark border border-gray-600 rounded-lg p-4">
+          <div className="glass-card rounded-lg p-4 shimmer">
             <div className="flex items-center gap-3 mb-3">
               <Zap size={24} className="text-primary" />
               <h3 className="font-bold">60Hz Tick Rate</h3>
@@ -55,7 +56,7 @@ const Server = () => {
       </section>
 
       {/* Threading Model */}
-      <section className="bg-dark-light border border-gray-700 rounded-lg p-6">
+      <section className="glass-card rounded-lg p-6">
         <h2 className="text-2xl font-bold mb-4 text-primary">Threading Model</h2>
         
         <div className="bg-dark border border-gray-600 rounded-lg p-4 mb-4">
@@ -107,7 +108,7 @@ const Server = () => {
       </section>
 
       {/* Main Components */}
-      <section className="bg-dark-light border border-gray-700 rounded-lg p-6">
+      <section className="glass-card rounded-lg p-6">
         <h2 className="text-2xl font-bold mb-4 text-primary">Main Components</h2>
 
         <div className="space-y-4">
@@ -209,7 +210,7 @@ const Server = () => {
       </section>
 
       {/* Game Loop */}
-      <section className="bg-dark-light border border-gray-700 rounded-lg p-6">
+      <section className="glass-card rounded-lg p-6">
         <h2 className="text-2xl font-bold mb-4 text-primary">Game Loop (60Hz)</h2>
         
         <div className="bg-dark border border-gray-600 rounded-lg p-4">
@@ -250,7 +251,7 @@ const Server = () => {
       </section>
 
       {/* Message Flow */}
-      <section className="bg-dark-light border border-gray-700 rounded-lg p-6">
+      <section className="glass-card rounded-lg p-6">
         <h2 className="text-2xl font-bold mb-4 text-primary">Message Flow Example</h2>
         
         <div className="space-y-4">
@@ -301,7 +302,7 @@ const Server = () => {
       </section>
 
       {/* Error Handling */}
-      <section className="bg-dark-light border border-gray-700 rounded-lg p-6">
+      <section className="glass-card rounded-lg p-6">
         <h2 className="text-2xl font-bold mb-4 text-primary">Error Handling & Robustness</h2>
         
         <div className="space-y-3">
@@ -339,11 +340,11 @@ const Server = () => {
       </section>
 
       {/* Performance */}
-      <section className="bg-dark-light border border-gray-700 rounded-lg p-6">
+      <section className="glass-card rounded-lg p-6">
         <h2 className="text-2xl font-bold mb-4 text-primary">Performance Considerations</h2>
         
         <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-dark border border-gray-600 rounded-lg p-4">
+          <div className="glass-card rounded-lg p-4 pulse-glow">
             <h3 className="font-bold mb-2 text-green-400">✅ Optimizations</h3>
             <ul className="space-y-1 text-sm text-gray-400">
               <li>• Non-blocking I/O (ASIO async)</li>
@@ -354,7 +355,7 @@ const Server = () => {
             </ul>
           </div>
 
-          <div className="bg-dark border border-gray-600 rounded-lg p-4">
+          <div className="glass-card rounded-lg p-4 pulse-glow">
             <h3 className="font-bold mb-2 text-blue-400">📊 Metrics</h3>
             <ul className="space-y-1 text-sm text-gray-400">
               <li>• <strong>Tick rate:</strong> 60Hz (16ms per frame)</li>
@@ -368,7 +369,7 @@ const Server = () => {
       </section>
 
       {/* Code Locations */}
-      <section className="bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-lg p-6">
+      <section className="neon-border rounded-lg p-6">
         <h2 className="text-2xl font-bold mb-4">Quick Reference: Code Locations</h2>
         
         <div className="grid md:grid-cols-2 gap-3 text-sm">

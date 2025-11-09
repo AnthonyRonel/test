@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Home, Layers, FolderTree, Box, Network, Server, Monitor, Code, GitCompare, FileCode } from 'lucide-react'
+import AnimatedBackground from './AnimatedBackground'
 
 const Layout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(true)
@@ -21,9 +22,10 @@ const Layout = ({ children }) => {
   ]
 
   return (
-    <div className="min-h-screen bg-dark">
+    <div className="min-h-screen bg-dark relative">
+      <AnimatedBackground />
       {/* Header */}
-      <header className="bg-dark-light border-b border-gray-700 sticky top-0 z-50">
+      <header className="glass-card border-b border-gray-700 sticky top-0 z-50 backdrop-blur-md">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -34,7 +36,7 @@ const Layout = ({ children }) => {
                 {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
               <h1 className="ml-4 text-2xl font-bold text-white">
-                R-Type <span className="text-primary">Documentation</span>
+                R-Type <span className="gradient-text">Documentation</span>
               </h1>
             </div>
             <div className="flex items-center space-x-4">
@@ -49,7 +51,7 @@ const Layout = ({ children }) => {
         <aside
           className={`${
             sidebarOpen ? 'w-64' : 'w-0'
-          } bg-dark-light border-r border-gray-700 transition-all duration-300 overflow-hidden`}
+          } glass-card border-r border-gray-700 transition-all duration-300 overflow-hidden backdrop-blur-md`}
         >
           <nav className="p-4 space-y-1">
             {navigation.map((item) => {
@@ -74,7 +76,7 @@ const Layout = ({ children }) => {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 overflow-y-auto">
+        <main className="flex-1 overflow-y-auto relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             {children}
           </div>
